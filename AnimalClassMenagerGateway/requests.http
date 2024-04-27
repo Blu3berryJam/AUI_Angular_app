@@ -1,0 +1,42 @@
+### Get all species
+
+GET http://localhost:8084/api/species
+
+### Get single species
+
+GET http://localhost:8084/api/species/Lion
+
+### Get single species, not existing
+
+GET http://localhost:8084/api/species/Hawk
+
+
+### Get classes
+
+GET http://localhost:8084/api/animalClasses
+
+### Create new class
+
+PUT http://localhost:8084/api/animalClasses/Birds
+Content-Type: application/json
+
+{
+  "name":"Birds",
+  "nrOfSpecies":1000
+}
+
+### Create species
+
+PUT http://localhost:8081/api/species/Hawk
+Content-Type: application/json
+
+{
+  "name":"Hawk",
+  "status":"Least Concern",
+  "animalClass":"Birds"
+
+}
+
+###usuwanie klasy
+DELETE http://localhost:8082/api/animalClasses/Mammals
+

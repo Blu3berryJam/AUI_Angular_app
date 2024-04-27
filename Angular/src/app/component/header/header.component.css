@@ -1,0 +1,10 @@
+header h1 {
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #92f800, #d91313);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+
+}

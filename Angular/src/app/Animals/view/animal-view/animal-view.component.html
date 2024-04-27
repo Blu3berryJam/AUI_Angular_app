@@ -1,0 +1,46 @@
+<article *ngIf="animal">
+  <header><h2>{{animal.name}}</h2></header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="row mb-2">
+          <div class="col-6">
+            NumberOfSpecies:
+            <span>{{animal.nrOfSpecies}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Id:
+            <span>{{animal.id}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Species:
+            <table *ngIf="species">
+              <tbody>
+              <tr *ngFor="let s of species.species">
+                <td> - {{s.name}}</td>
+                <td>
+                  <a [routerLink]="['/species/'+s.name]">View</a>
+                </td>
+                <td>
+                  <a [routerLink]="['/species/'+s.name, 'edit']">Edit</a>
+                </td>
+                <td>
+                  <button (click)="onDelete(s)">Delete</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <a [routerLink]="['/animalClasses',animal.name,'species','create']">Create species</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

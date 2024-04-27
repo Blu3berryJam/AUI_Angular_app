@@ -1,0 +1,28 @@
+<article class="text--justified">
+    <header><h2>Animals Classes</h2></header>
+    <table *ngIf="animals">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of animals.animalClasses">
+            <td>{{c.name}}</td>
+            <td>
+                <a [routerLink]="['/animalClasses', c.name]">View</a>
+            </td>
+            <td>
+                <a [routerLink]="['/animalClasses', c.name, 'edit']">Edit</a>
+            </td>
+            <td>
+                <button (click)="onDelete(c)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a [routerLink]="['/animalClasses', 'create']">Create new animal class</a>
+</article>

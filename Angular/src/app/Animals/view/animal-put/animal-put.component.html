@@ -1,0 +1,33 @@
+<article *ngIf="animal">
+    <header><h2>Create new fleet</h2></header>
+
+    <form class="container"  #form="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-4 p-2">
+                <div>
+                    <label for="animalName">Name:</label>
+                    <input id="animalName" name="animalName" [(ngModel)]="animal.name"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 p-2">
+                <div>
+                    <label for="nrOfSpecies">Number of species:</label>
+                    <input id="nrOfSpecies" name="nrOfSpecies" required [(ngModel)]="animal.nrOfSpecies"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-2 p-2">
+                <button type="submit">Submit</button>
+            </div>
+            <div class="col-2 p-2">
+                <button type="button" (click)="form.resetForm()">Reset</button>
+            </div>
+        </div>
+    </form>
+</article>

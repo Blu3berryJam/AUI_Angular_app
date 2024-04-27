@@ -1,0 +1,25 @@
+###wszystkie gatunki
+GET http://localhost:8081/species
+###konkretny gatunek
+GET http://localhost:8081/species/Lion
+###dodaj gatunek
+PUT http://localhost:8081/species/Hawk
+Content-Type: application/json
+
+{
+  "name":"Hawk",
+  "status":"Least Concern",
+  "animalClass":"Birds"
+
+}
+###edycja gatunku
+PATCH http://localhost:8081/species/Hawk
+Content-Type: application/json
+
+{
+  "status":"Endangered"
+}
+###usuwanie gatunku
+DELETE http://localhost:8081/species/Hawk
+###
+GET http://localhost:8081/animalClasses/Mammals/species

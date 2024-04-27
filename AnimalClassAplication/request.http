@@ -1,0 +1,24 @@
+###wszystkie klasy
+GET http://localhost:8082/animalClasses
+###konkretna klasa (gady)
+GET http://localhost:8082/animalClasses/Reptiles
+###dodanie klasy
+PUT http://localhost:8082/animalClasses/Birds
+Content-Type: application/json
+
+{
+  "name":"Birds",
+  "nrOfSpecies":1000
+}
+
+###edycja klasy
+PATCH http://localhost:8082/animalClasses/Krzak
+Content-Type: application/json
+
+{
+  "nrOfSpecies":420
+}
+###usuwanie klasy
+DELETE http://localhost:8082/animalClasses/Birds
+###
+

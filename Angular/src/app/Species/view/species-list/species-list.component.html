@@ -1,0 +1,31 @@
+<article class="text--justified">
+  <header><h2>Species</h2></header>
+
+  <table *ngIf="species">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+
+      <tbody>
+      <tr *ngFor="let s of species.species">
+        <td> - {{s.name}}</td>
+        <td>
+          <a [routerLink]="['/species/'+s.name]">View</a>
+        </td>
+        <td>
+          <a [routerLink]="['/species/'+s.name, 'edit']">Edit</a>
+        </td>
+        <td>
+          <button (click)="onDelete(s)">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+
+  </table>
+</article>

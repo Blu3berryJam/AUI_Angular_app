@@ -1,0 +1,19 @@
+
+div.container {
+  text-align: center;
+}
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+ul li {
+  border: 1px solid #5f75de; /* Add a thin border to each list item */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #29d91b; /* Add a grey background color */
+  padding: 12px; /* Add some padding */
+  margin-left: 30%;
+  margin-right: 30%;
+}
+

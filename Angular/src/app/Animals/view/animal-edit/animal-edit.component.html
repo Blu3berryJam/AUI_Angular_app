@@ -1,0 +1,26 @@
+<article *ngIf="class">
+  <header><h2>Edit animal class</h2></header>
+
+  <form class="container"  #form="ngForm" (ngSubmit)="onSubmit()">
+
+
+    <div class="row">
+      <div class="col-4 p-2">
+        <div>
+          <label for="nrOfSpecies">Number of species:</label>
+          <input id="nrOfSpecies" name="nrOfSpecies" [(ngModel)]="class.nrOfSpecies"/>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-2 p-2">
+        <button type="submit">Update</button>
+      </div>
+      <div class="col-2 p-2">
+        <button type="button" (click)="form.resetForm(original)">Reset</button>
+      </div>
+    </div>
+  </form>
+</article>
